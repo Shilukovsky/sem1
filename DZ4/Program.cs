@@ -1,20 +1,10 @@
-﻿
-Console.WriteLine("введите через enter три числа");
+﻿Console.Clear();
+Console.WriteLine("введите через ENTER три числа");
 int num1 = Convert.ToInt32(Console.ReadLine());
 int num2 = Convert.ToInt32(Console.ReadLine());
 int num3 = Convert.ToInt32(Console.ReadLine());
-if(num1>num2)
-    if(num1>num3)
-{
-    Console.WriteLine($"{num1} самое большое число");  
-}
-else if(num2>num1)
-     if(num2>num3)
-{
-    Console.WriteLine($"{num2} самое большое число");  
-}    
-else if(num3>num1)
-     if(num3>num2)
-{
-    Console.WriteLine($"{num3} самое большое число");  
-}
+int max = num1;
+if (num1 > max) max = num1;
+if (num2 > max) max = num2;
+if (num3 > max) max = num3;
+Console.WriteLine($"самое большое число {max}");
